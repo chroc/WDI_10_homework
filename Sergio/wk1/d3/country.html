@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Country</title>
+  </head>
+  <body>
+    <h2>Country</h2>
+
+    <script type="text/javascript">
+
+      function Country(countryCode, name, statesNumber, populationNumber){
+        this.countryCode = countryCode;
+        this.name = name;
+        this.statesNumber = statesNumber;
+        this.populationNumber = populationNumber;
+        this.presidentName = "Obama";
+        this.increasePopulation = function(numberOfPeople){
+          this.populationNumber += numberOfPeople;
+        };
+        this.decreasePopulation = function(numberOfPeople){
+          this.populationNumber -= numberOfPeople;
+        };
+        // When adding a state, the population will increase, the statesNumber and the country size
+        this.addState = function(stateName, numberOfPeople){
+          this.statesNumber += 1;
+          this.increasePopulation(numberOfPeople);
+          console.log("State added: " + stateName);
+        };
+        this.voteForPresident = function(presidentName, votesNumber){
+          if(votesNumber > (this.populationNumber / 2)){
+            this.presidentName = presidentName;
+            return "We got a new President!! Congrats " + presidentName;
+          }else{
+            return "Not enough votes for " + presidentName;
+          }
+        }
+      }
+
+      // Create a Country
+      var myCountry = new Country("1", "USA", 50, 318000);
+
+    </script>
+  </body>
+</html>
