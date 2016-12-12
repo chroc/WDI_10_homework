@@ -1,0 +1,21 @@
+<form action="/" method="get">
+  <input type="text" name="movie" value="" placeholder="Enter Movie title">
+  <button>Get Movie</button>
+</form>
+<% unless @movie_name.nil? || @movie_name.empty? %><br>
+  <div class="">
+    <img src="<%= @result["Poster"] %>" alt="<%= @result["Title"] %>">
+    <ul>
+      <li><b>Genre: </b><%= @result["Genre"]%></li>
+      <li><b>Year: </b><%= @result["Year"]%></li>
+      <li><b>Released: </b><%= @result["Released"]%></li>
+      <li><b>Runtime: </b><%= @result["Runtime"]%></li>
+      <li><b>Director: </b><%= @result["Director"]%></li>
+      <li><b>Writer: </b><%= @result["Writer"]%></li>
+      <li><b>Awards: </b><%= @result["Awards"]%></li>
+      <li><b>Plot: </b><%= @result["Plot"]%></li>
+      <li><b>Language: </b><%= @result["Language"]%></li>
+    </ul>
+
+  </div>
+<%end%>
