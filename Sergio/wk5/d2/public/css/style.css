@@ -1,0 +1,21 @@
+h1 {
+  /*font-family: 'Faster One', cursive;*/
+  font-family: 'Chewy', cursive;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Chewy', cursive;
+}
+
+.notfound {
+  font-family: 'Coming Soon', cursive;
+}
+
+.videos {
+  font-family: 'Yatra One', cursive;
+}
+
+body {
+  background: -webkit-linear-gradient(#1CD8D2, #93EDC7);
+}
