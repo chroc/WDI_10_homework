@@ -1,0 +1,11 @@
+<form action="/" method="get">
+  <input type="text" name="movie" value="" placeholder="Enter Movie title">
+  <button>Get Movie</button>
+</form>
+<% unless @movie_name.nil? || @movie_name.empty? %><br>
+  <ul>
+    <% @search_array.each do |movie| %>
+      <li><a href="/movie/<%= movie["Title"] %>"><%= movie["Title"] %></a></li>
+    <% end %>
+  </ul>
+<%end%>
