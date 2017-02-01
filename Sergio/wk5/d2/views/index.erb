@@ -10,11 +10,8 @@
 <% @videos.each do |video| %>
   <div class="videos">
     <iframe width="290" height="175" src="https://www.youtube.com/embed/<%= video["url"] %>" frameborder="0" allowfullscreen></iframe>
-    <%= video["title"] %> -
+    <a href="/edit/<%= video["id"] %>"><%= video["title"] %></a> -
     <%= video["description"] %> -
     <%= video["genre"] %>
   </div>
 <% end %>
-
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/0ehrUX2KpIE" frameborder="0" allowfullscreen></iframe> -->
-<!-- id 1 title Simpsons time description Simpsons funniest moments url https://youtu.be/0ehrUX2KpIE genre Comedy -->

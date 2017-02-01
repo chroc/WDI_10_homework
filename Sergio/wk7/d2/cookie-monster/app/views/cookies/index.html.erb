@@ -1,0 +1,20 @@
+<h1>Cookies</h1>
+
+<form class="new-cookie" action="index.html" method="post">
+  <label>Name</label>
+  <input id="name" type="text" name="name" value="">
+  <label>Description</label>
+  <input id="description" type="text" name="description" value="">
+  <label>Price</label>
+  <input id="price" type="text" name="price" value="">
+  <label>Tasty</label>
+  <input id="tasty" type="text" name="tasty" value="">
+</form>
+
+<button id="add-cookie" type="button">Gimme Cookie</button>
+
+<ul id="cookies-list">
+  <% @cookies.each do |cookie| %>
+    <li> <strong><%= cookie.name %></strong>: <span><%= cookie.description %></span> - $<%= cookie.price %></li>
+  <% end %>
+</ul>

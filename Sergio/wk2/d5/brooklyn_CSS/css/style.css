@@ -1,0 +1,18 @@
+.container{
+  width: 960px;
+  text-align: justify;
+  margin-left: 100px;
+  }
+
+.div4 img{
+  border: 6px solid;
+  border-color: #C0C0C0;
+}
+
+h1, h3, p, footer{
+  color: #A9A9A9;
+}
+
+h5{
+  color: #00BFFF;
+}

@@ -19,3 +19,8 @@ h2 {
 body {
   background: -webkit-linear-gradient(#1CD8D2, #93EDC7);
 }
+
+.video_details {
+  font-family: 'Yatra One', cursive;
+  float: left;
+}

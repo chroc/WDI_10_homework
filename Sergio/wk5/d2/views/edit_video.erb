@@ -1,0 +1,18 @@
+<h2>Edit Video</h2>
+
+<form class="" action="/edit/<%= @video["id"] %>" method="post">
+  <input type="text" name="title" value="<%= @video["title"] %>"><br>
+  <input type="text" name="description" value="<%= @video["description"] %>"><br>
+  <input type="text" name="url" value="https://www.youtube.com/watch?v=<%= @video["url"] %>"><br>
+  <input type="text" name="genre" value="<%= @video["genre"] %>"><br><br>
+  <button type="submit">Save</button>
+</form>
+<br>
+<iframe width="290" height="175" src="https://www.youtube.com/embed/<%= @video["url"] %>" frameborder="0" allowfullscreen></iframe>
+<span class="video_details">
+  <ul>
+    <li><%= @video["title"] %></li>
+    <li><%= @video["description"] %></li>
+    <li><%= @video["genre"] %></li>
+  </ul>
+</span>

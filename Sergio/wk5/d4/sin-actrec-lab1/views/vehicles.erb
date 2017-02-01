@@ -1,0 +1,6 @@
+<a href="/vehicles/new">Create Vehicle</a>
+<ul>
+  <% @vehicles.each do |vehicle| %>
+    <li><%= vehicle.name %> - <%= vehicle.type %> - <%= vehicle.make %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,28 @@
+<h1>BaceFook</h1>
+<form id="new-post" action="/posts" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label>New Post</label><br>
+  <input name="content" type="text" />
+  <button id='add-post'>Post</button>
+</form>
+
+<h2>Posts:</h2>
+<ul>
+  <% @posts.each do |post| %>
+  <p>
+    <li><%= post.content %></li>
+    <% @comments = post.comments %>
+    <ul>
+      <% @comments.each do |comment| %>
+        <li><%= comment.content %></li>
+      <% end %>
+    </ul>
+    <form id="new-comment" action="/comments" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" name="post_id" value="<%= post.id %>">
+      <input id="content" type="text" name="content" value="" placeholder="Write a comment...">
+      <button class='add-comment' type="submit">submit</button>
+    </form>
+  <% end %>
+  </p>
+</ul>

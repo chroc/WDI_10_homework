@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stock App</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <form action="/" method="get">
+      <input name="stock" type="text" placeholder="Insert your code" />
+      <button>Get Stock</button>
+    </form>
+    <% if @stock_code%>
+      <p><%= @result%></p>
+      <p>Open: <%= @result[@stock_code].open %></p>
+    <% end %>
+  </body>
+</html>
